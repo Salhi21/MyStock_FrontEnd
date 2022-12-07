@@ -1,7 +1,21 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { FournisseurViewComponent } from './pages/fournisseur-view/fournisseur-view.component';
+import { HomePageComponent } from './pages/home-page/home-page.component';
+import { LoginPageComponent } from './pages/login-page/login-page.component';
+import { NewFournisseurComponent } from './pages/new-fournisseur/new-fournisseur.component';
+import { NewProduitComponent } from './pages/new-produit/new-produit.component';
+import { ProduitViewComponent } from './pages/produit-view/produit-view.component';
 
-const routes: Routes = [];
+const routes: Routes = [
+  { path: '', redirectTo: '/login', pathMatch: 'full' },
+  { path: 'login', component: LoginPageComponent },
+  { path: 'home', component : HomePageComponent},
+   {path:'produits',component : ProduitViewComponent},
+   {path:'fournisseurs',component : FournisseurViewComponent},
+   {path:'new-produit',component : NewProduitComponent},
+   {path:'new-forunisseur',component : NewFournisseurComponent},
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
