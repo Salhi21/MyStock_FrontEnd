@@ -22,9 +22,9 @@
                 </div>
 
                 <!-- Task Elements -->
-                <div class="task">
+                <div class="task" *ngFor="let fournisseur of fournisseurs">
                     <div class="task-text">
-                        <p>test</p>
+                        <p>{{fournisseur.nomFournisseur}}</p>
                     </div>
                     <div class="task-buttons">
                         <button class="button">
@@ -33,7 +33,7 @@
               </div>
             </button>
 
-                        <button class="button is-danger" style="margin-left: 10px">
+                        <button class="button is-danger" style="margin-left: 10px" (click)="deleteForunisseur(fournisseur.idFournisseur)">
               <div class="icon">
                 <i class="fas fa-trash"></i>
               </div>

@@ -1,0 +1,14 @@
+<div class="centered-content">
+    <div class="modal-box">
+        <h1 class="title">Create a new Category</h1>
+        <span class="tag is-medium">
+          Name
+        </span>
+        <input #NameInput class="input has-background-light is-medium" type="text" placeholder="Type here ...">
+        <br><br>
+        <div class="buttons is-right">
+            <div class="button is-medium" routerLink="/">Cancel</div>
+            <div class="button is-primary has-text-white is-medium" (click)="saveCategorie(NameInput.value)">Create</div>
+        </div>
+    </div>
+</div>

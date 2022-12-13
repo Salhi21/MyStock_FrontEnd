@@ -10,6 +10,7 @@ import { NewProduitComponent } from './pages/new-produit/new-produit.component';
 import { NewFournisseurComponent } from './pages/new-fournisseur/new-fournisseur.component';
 import { FournisseurViewComponent } from './pages/fournisseur-view/fournisseur-view.component';
 import { HttpClientModule } from '@angular/common/http';
+import { NewCategoryComponent } from './pages/new-category/new-category.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,6 +20,7 @@ import { HttpClientModule } from '@angular/common/http';
     NewProduitComponent,
     NewFournisseurComponent,
     FournisseurViewComponent,
+    NewCategoryComponent,
   ],
   imports: [
     BrowserModule,

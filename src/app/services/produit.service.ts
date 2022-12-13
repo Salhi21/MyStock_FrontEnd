@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { categorie } from '../models/categorie.model';
 import { WebRequestService } from './web-request.service';
 
 @Injectable({
@@ -22,5 +23,8 @@ export class ProduitService {
 
   deleteProduit(id:number){
     return this.WebReqService.delete('produit/delete/'+id)
+  }
+  saveCategorie(categorie:categorie){
+    return this.WebReqService.post('categorie/save',categorie);
   }
 }

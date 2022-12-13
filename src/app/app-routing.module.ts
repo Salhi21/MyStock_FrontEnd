@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { FournisseurViewComponent } from './pages/fournisseur-view/fournisseur-view.component';
 import { HomePageComponent } from './pages/home-page/home-page.component';
 import { LoginPageComponent } from './pages/login-page/login-page.component';
+import { NewCategoryComponent } from './pages/new-category/new-category.component';
 import { NewFournisseurComponent } from './pages/new-fournisseur/new-fournisseur.component';
 import { NewProduitComponent } from './pages/new-produit/new-produit.component';
 import { ProduitViewComponent } from './pages/produit-view/produit-view.component';
@@ -15,6 +16,7 @@ const routes: Routes = [
    {path:'fournisseurs',component : FournisseurViewComponent},
    {path:'new-produit',component : NewProduitComponent},
    {path:'new-forunisseur',component : NewFournisseurComponent},
+   {path:'new-category',component : NewCategoryComponent},
 ];
 
 @NgModule({
