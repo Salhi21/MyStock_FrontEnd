@@ -1,29 +1,26 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { produit } from 'src/app/models/produit.model';
 import { ProduitService } from 'src/app/services/produit.service';
 
 @Component({
-  selector: 'app-new-produit',
-  templateUrl: './new-produit.component.html',
-  styleUrls: ['./new-produit.component.scss'],
+  selector: 'app-edit-produit',
+  templateUrl: './edit-produit.component.html',
+  styleUrls: ['./edit-produit.component.scss']
 })
-export class NewProduitComponent implements OnInit {
+export class EditProduitComponent implements OnInit {
+
   constructor(
     private produitService: ProduitService,
     private route: ActivatedRoute,
     private router: Router
-  ) {}
-  prod : produit;
+  ) { }
+
   ngOnInit(): void {
-    this.prod = this.produitService.produit;
-    console.log(this.prod);
-    console.log(this.produitService.produit);
+  console.log(this.produitService.produit);
+
 
   }
-
-
-  saveProduit(
+  editProduit(
     lib: string,
     prix: number,
     desc: string,
@@ -45,4 +42,5 @@ export class NewProduitComponent implements OnInit {
       this.router.navigate(['/produits']);
     });
   }
+
 }

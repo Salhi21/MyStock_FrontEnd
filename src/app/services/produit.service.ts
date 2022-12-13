@@ -1,12 +1,14 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { categorie } from '../models/categorie.model';
+import { produit } from '../models/produit.model';
 import { WebRequestService } from './web-request.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ProduitService {
+  produit:produit;
 
   constructor(private WebReqService : WebRequestService,private httpClient:HttpClient) { }
   getProduits(){
@@ -26,5 +28,11 @@ export class ProduitService {
   }
   saveCategorie(categorie:categorie){
     return this.WebReqService.post('categorie/save',categorie);
+  }
+  saveProduit(produit:produit){
+    return this.WebReqService.post('produit/save',produit);
+  }
+  editProduit(produit:produit,id:number){
+    return this.WebReqService.put('produit/update/'+id,produit);
   }
 }

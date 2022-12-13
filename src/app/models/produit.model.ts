@@ -4,4 +4,7 @@ export class produit {
   descProd: string;
   prix : number;
   dateAjout : Date
+  categorie : {
+    idCateg : number;
+  }
 }

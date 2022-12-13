@@ -11,6 +11,7 @@ import { NewFournisseurComponent } from './pages/new-fournisseur/new-fournisseur
 import { FournisseurViewComponent } from './pages/fournisseur-view/fournisseur-view.component';
 import { HttpClientModule } from '@angular/common/http';
 import { NewCategoryComponent } from './pages/new-category/new-category.component';
+import { EditProduitComponent } from './pages/edit-produit/edit-produit.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,6 +22,7 @@ import { NewCategoryComponent } from './pages/new-category/new-category.componen
     NewFournisseurComponent,
     FournisseurViewComponent,
     NewCategoryComponent,
+    EditProduitComponent,
   ],
   imports: [
     BrowserModule,

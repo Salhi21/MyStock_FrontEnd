@@ -20,7 +20,7 @@ export class FournisseurService {
     return this.WebReqService.delete(`fournisseur/delete/${idFournisseur}`);
   }
   editFourunisseur(idFournisseur: number, fournisseur: any) {
-    return this.WebReqService.patch(
+    return this.WebReqService.put(
       `fournisseur/edit/${idFournisseur}`,
       fournisseur
     );

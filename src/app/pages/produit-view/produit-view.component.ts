@@ -26,7 +26,6 @@ export class ProduitViewComponent implements OnInit {
       this.produitService.getCategories().subscribe((response: ApiResponse) => {
         this.response = response;
         this.categories = response.data.categorie;
-        console.log(this.categories);
       });
     });
   }
@@ -35,11 +34,9 @@ export class ProduitViewComponent implements OnInit {
   this.id = categorie.idCateg;
 
   this.categories.forEach((item) => {
-    console.log(item.idCateg);
-    console.log(item.produits);
+
     if (item.idCateg === this.id) {
       this.produits = item.produits;
-      console.log(this.produits);
 
     }
   })
@@ -47,8 +44,11 @@ export class ProduitViewComponent implements OnInit {
 
   }
 
-  editProduit(idProduit: number) {
-    this.produitService.deleteProduit(idProduit);
+  editProduit(prod : produit) {
+    this.produitService.produit = prod;
+    console.log(prod);
+
+    this.router.navigate(['/edit-produit']);
   }
 
   deleteProduit(idProduit: number) {
