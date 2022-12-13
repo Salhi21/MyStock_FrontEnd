@@ -32,7 +32,7 @@ export class ProduitViewComponent implements OnInit {
 
   afficherProduit(categorie: categorie) {
   this.id = categorie.idCateg;
-
+  this.produitService.categorie = categorie;
   this.categories.forEach((item) => {
 
     if (item.idCateg === this.id) {
@@ -66,5 +66,14 @@ export class ProduitViewComponent implements OnInit {
 
       this.produits.splice(index, 1);
     });
+  }
+  deleteCategorie() {
+    this.produitService.deleteCategorie(this.id).subscribe((res: any) => {
+    });
+    let index = this.categories.findIndex(
+      (item) => item.idCateg === this.id
+    );
+    this.categories.splice(index, 1);
+
   }
 }

@@ -9,6 +9,7 @@ import { WebRequestService } from './web-request.service';
 })
 export class ProduitService {
   produit:produit;
+  categorie:categorie;
 
   constructor(private WebReqService : WebRequestService,private httpClient:HttpClient) { }
   getProduits(){
@@ -34,5 +35,8 @@ export class ProduitService {
   }
   editProduit(produit:produit,id:number){
     return this.WebReqService.put('produit/update/'+id,produit);
+  }
+  deleteCategorie(id:number){
+    return this.WebReqService.delete('categorie/delete/'+id);
   }
 }

@@ -11,12 +11,14 @@ export class EditProduitComponent implements OnInit {
 
   constructor(
     private produitService: ProduitService,
-    private route: ActivatedRoute,
     private router: Router
   ) { }
+  prod = this.produitService.produit;
+  categ = this.produitService.categorie;
 
   ngOnInit(): void {
-  console.log(this.produitService.produit);
+    console.log(this.produitService.categorie);
+
 
 
   }
@@ -38,7 +40,7 @@ export class EditProduitComponent implements OnInit {
     };
     console.log(prod);
 
-    this.produitService.saveProduit(prod).subscribe((res: any) => {
+    this.produitService.editProduit(prod,this.produitService.produit.idProduit).subscribe((res: any) => {
       this.router.navigate(['/produits']);
     });
   }

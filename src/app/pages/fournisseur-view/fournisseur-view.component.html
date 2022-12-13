@@ -27,7 +27,7 @@
                         <p>{{fournisseur.nomFournisseur}}</p>
                     </div>
                     <div class="task-buttons">
-                        <button class="button">
+                        <button class="button" (click)="editFournisseur(fournisseur)">
               <div class="icon">
                 <i class="fas fa-edit"></i>
               </div>
@@ -47,7 +47,7 @@
         </button>
 
             </div>
-            <button class="button is-primary has-text-white" routerLink="/new-produit">
+            <button class="button is-primary has-text-white" routerLink="/new-fournisseur">
         + New fournisseur
       </button>
             <br>

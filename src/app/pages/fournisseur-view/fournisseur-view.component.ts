@@ -49,4 +49,11 @@ export class FournisseurViewComponent implements OnInit {
         this.fournisseurs.splice(index, 1);
       });
   }
+
+  editFournisseur(fournisseur: fournisseur) {
+    this.fournisseurService.fournisseur = fournisseur;
+    console.log(fournisseur);
+
+    this.router.navigate(['/edit-fournisseur']);
+  }
 }

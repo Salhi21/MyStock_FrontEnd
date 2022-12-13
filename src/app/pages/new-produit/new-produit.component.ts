@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { ApiResponse } from 'src/app/models/api-response';
+import { categorie } from 'src/app/models/categorie.model';
 import { produit } from 'src/app/models/produit.model';
 import { ProduitService } from 'src/app/services/produit.service';
 
@@ -15,11 +17,17 @@ export class NewProduitComponent implements OnInit {
     private router: Router
   ) {}
   prod : produit;
+  response : ApiResponse;
+  categories: categorie[];
   ngOnInit(): void {
     this.prod = this.produitService.produit;
     console.log(this.prod);
-    console.log(this.produitService.produit);
-
+    this.route.params.subscribe(() => {
+      this.produitService.getCategories().subscribe((response: ApiResponse) => {
+        this.response = response;
+        this.categories = response.data.categorie;
+      });
+    });
   }
 
 

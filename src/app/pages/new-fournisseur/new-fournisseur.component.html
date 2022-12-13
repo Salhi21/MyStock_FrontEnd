@@ -1,1 +1,28 @@
-<p>new-fournisseur works!</p>
+<div class="centered-content">
+    <div class="modal-box">
+        <h1 class="title">Create a new </h1>
+        <span class="tag is-medium">
+          Name
+        </span>
+        <input #nameInput class="input has-background-light is-medium" type="text" placeholder="Type here ...">
+        <span class="tag is-medium">
+          Adress
+        </span>
+        <input #adressInput class="input has-background-light is-medium" type="text" placeholder="Type here ...">
+        <span class="tag is-medium">
+          Email
+        </span>
+        <input #emailInput class="input has-background-light is-medium" type="email" placeholder="Type here ...">
+        <span class="tag is-medium">
+          telephone
+        </span>
+        <input #telInput class="input has-background-light is-medium" type="number" placeholder="Type here ...">
+
+
+        <br><br>
+        <div class="buttons is-right">
+            <div class="button is-medium" routerLink="/">Cancel</div>
+            <div class="button is-primary has-text-white is-medium" (click)="saveFournisseur(nameInput.value,adressInput.value,emailInput.value,telInput.valueAsNumber)">Create</div>
+        </div>
+    </div>
+</div>

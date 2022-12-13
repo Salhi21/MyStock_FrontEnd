@@ -4,23 +4,23 @@
         <span class="tag is-medium">
           Name
         </span>
-        <input #nameInput class="input has-background-light is-medium" type="text" placeholder="Type here ...">
+        <input #nameInput class="input has-background-light is-medium" type="text" value="{{prod.libProd}}" placeholder="Type here ...">
         <span class="tag is-medium">
           Description
         </span>
-        <input #descriptionInput class="input has-background-light is-medium" type="text" placeholder="Type here ...">
+        <input #descriptionInput class="input has-background-light is-medium" type="text" value="{{prod.descProd}}" placeholder="Type here ...">
         <span class="tag is-medium">
           Price
         </span>
-        <input #priceInput class="input has-background-light is-medium" type="number" placeholder="Type here ...">
+        <input #priceInput class="input has-background-light is-medium" type="number" value="{{prod.prix}}" placeholder="Type here ...">
         <span class="tag is-medium">
           Date
         </span>
-        <input #dateInput class="input has-background-light is-medium" type="date" placeholder="Type here ...">
+        <input #dateInput class="input has-background-light is-medium" type="date" value="{{prod.dateAjout}}" placeholder="Type here ...">
         <span class="tag is-medium">
           Categorie
         </span>
-        <input #categorieInput class="input has-background-light is-medium" type="number" placeholder="Type here ...">
+        <input #categorieInput class="input has-background-light is-medium" type="number" value="{{categ.idCateg}}" placeholder="Type here ...">
         <br><br>
         <div class="buttons is-right">
             <div class="button is-medium" routerLink="/">Cancel</div>

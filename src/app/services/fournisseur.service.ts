@@ -1,27 +1,28 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { fournisseur } from '../models/fournisseur.model';
 import { WebRequestService } from './web-request.service';
 
 @Injectable({
   providedIn: 'root',
 })
 export class FournisseurService {
+  fournisseur: fournisseur;
   constructor(
     private WebReqService: WebRequestService,
-    private httpClient: HttpClient
   ) {}
   getFourniseurs() {
     return this.WebReqService.get('fournisseur/list');
   }
   addFournisseur(fournisseur: any) {
-    return this.WebReqService.post('fournisseur/add', fournisseur);
+    return this.WebReqService.post('fournisseur/save', fournisseur);
   }
   deleteFournisseur(idFournisseur: number) {
-    return this.WebReqService.delete(`fournisseur/delete/${idFournisseur}`);
+    return this.WebReqService.delete('fournisseur/delete/'+idFournisseur);
   }
-  editFourunisseur(idFournisseur: number, fournisseur: any) {
+  editFournisseur(fournisseur: fournisseur, idFournisseur: number) {
     return this.WebReqService.put(
-      `fournisseur/edit/${idFournisseur}`,
+      `fournisseur/update/${idFournisseur}`,
       fournisseur
     );
   }

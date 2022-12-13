@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { EditFournisseurComponent } from './pages/edit-fournisseur/edit-fournisseur.component';
 import { EditProduitComponent } from './pages/edit-produit/edit-produit.component';
 import { FournisseurViewComponent } from './pages/fournisseur-view/fournisseur-view.component';
 import { HomePageComponent } from './pages/home-page/home-page.component';
@@ -17,7 +18,8 @@ const routes: Routes = [
    {path:'fournisseurs',component : FournisseurViewComponent},
    {path:'new-produit',component : NewProduitComponent},
    {path:'edit-produit',component : EditProduitComponent},
-   {path:'new-forunisseur',component : NewFournisseurComponent},
+   {path:'edit-fournisseur',component : EditFournisseurComponent},
+   {path:'new-fournisseur',component : NewFournisseurComponent},
    {path:'new-category',component : NewCategoryComponent},
 ];
 
