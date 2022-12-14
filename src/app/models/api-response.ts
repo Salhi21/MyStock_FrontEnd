@@ -1,4 +1,5 @@
 import { categorie } from "./categorie.model";
+import { facture } from "./facture-model";
 import { fournisseur } from "./fournisseur.model";
 import { produit } from "./produit.model";
 
@@ -11,6 +12,7 @@ export class ApiResponse {
     produits : produit[];
     categorie : categorie[];
     fournisseur : fournisseur[];
+    facture : facture[];
 
   };
 }

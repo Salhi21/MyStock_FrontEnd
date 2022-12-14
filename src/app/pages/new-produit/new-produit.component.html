@@ -20,17 +20,16 @@
         <span class="tag is-medium">
           Categorie
         </span>
-        <input #categorieInput class="input has-background-light is-medium" type="number" placeholder="Type here ...">
         <div class="select">
-            <select name="categorie" id="cat">
-            <option *ngFor="let categorie of categories" value="{{categorie.idCateg}}">{{categorie.libCateg}}</option>
+            <select #categorieInput name="categorie" id="cat">
+            <option *ngFor="let categorie of categories" value="{{categorie.idCateg}}}">{{categorie.libCateg}}</option>
           </select>
         </div>
 
         <br><br>
         <div class="buttons is-right">
             <div class="button is-medium" routerLink="/">Cancel</div>
-            <div class="button is-primary has-text-white is-medium" (click)="saveProduit(nameInput.value,priceInput.valueAsNumber,descriptionInput.value,dateInput.value,categorieInput.valueAsNumber)">Create</div>
+            <div class="button is-primary has-text-white is-medium" (click)="saveProduit(nameInput.value,priceInput.valueAsNumber,descriptionInput.value,dateInput.value,categorieInput.selectedIndex)">Create</div>
         </div>
     </div>
 </div>

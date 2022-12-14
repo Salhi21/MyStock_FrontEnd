@@ -3,7 +3,7 @@
         <div class="task-produit-container has-background-light">
             <div>
                 <div class="top-bar">
-                    <h1 class="title has-text-primary">Fournisseur</h1>
+                    <h1 class="title has-text-primary">Factures</h1>
                     <div class="dropdown is-hoverable is-right">
                         <div class="dropdown-trigger">
                             <button class="button" aria-haspopup="true" aria-controls="dropdown-menu4">
@@ -21,23 +21,19 @@
                 </div>
 
                 <!-- Task Elements -->
-                <div class="task" *ngFor="let fournisseur of fournisseurs">
+                <div class="task" *ngFor="let facture of factures">
                     <div class="task-text">
-                        <p>{{ fournisseur.nomFournisseur }}</p>
+                        <p>{{facture.fact_Achat}}</p>
                     </div>
                     <div class="task-buttons">
-                        <button class="button" (click)="editFournisseur(fournisseur)">
+                        <button class="button" (click)="editFacture(facture)">
               <div class="icon">
                 <i class="fas fa-edit"></i>
               </div>
             </button>
-                        <button class="button is-blue" style="margin-left: 10px" (click)="editFacture(fournisseur)">
-              <div class="icon">
-                <i class="fas fa-book"></i>
-              </div>
-            </button>
 
-                        <button class="button is-danger" style="margin-left: 10px" (click)="deleteForunisseur(fournisseur.idFournisseur)">
+
+                        <button class="button is-danger" style="margin-left: 10px" (click)="deleteFacture(facture.fact_Achat)">
               <div class="icon">
                 <i class="fas fa-trash"></i>
               </div>
@@ -50,7 +46,7 @@
         </button>
             </div>
             <button class="button is-primary has-text-white" routerLink="/new-fournisseur">
-        + New fournisseur
+        + Nouveau commande
       </button>
             <br />
         </div>

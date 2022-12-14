@@ -26,6 +26,8 @@ export class ProduitViewComponent implements OnInit {
       this.produitService.getCategories().subscribe((response: ApiResponse) => {
         this.response = response;
         this.categories = response.data.categorie;
+        console.log(this.categories);
+
       });
     });
   }
@@ -40,6 +42,7 @@ export class ProduitViewComponent implements OnInit {
 
     }
   })
+console.log(this.produits);
 
 
   }

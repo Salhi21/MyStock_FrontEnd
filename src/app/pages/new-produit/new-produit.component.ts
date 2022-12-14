@@ -38,13 +38,15 @@ export class NewProduitComponent implements OnInit {
     date: string,
     categorie: number
   ) {
+    let id :number;
+    id =this.categories[categorie].idCateg;
     let prod: any = {
       libProd: lib,
       descProd: desc,
       prix: prix,
       dateAjout: date,
       categorie: {
-        idCateg: categorie,
+        idCateg: id,
       },
     };
     console.log(prod);

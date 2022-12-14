@@ -17,7 +17,8 @@ $input-border-color: transparent;
 $input-shadow: none;
 // Set custom global styles (will be applied to whole app)
 html {
-    background: linear-gradient(to right top, $crimson, $red);
+    background-image: url("./assets/medicaments.jpg");
+    background-size: cover;
 }
 
 html,

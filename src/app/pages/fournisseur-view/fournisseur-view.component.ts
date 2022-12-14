@@ -56,4 +56,9 @@ export class FournisseurViewComponent implements OnInit {
 
     this.router.navigate(['/edit-fournisseur']);
   }
+  editFacture(fournisseur: fournisseur) {
+    this.fournisseurService.fournisseur = fournisseur;
+    console.log(fournisseur);
+    this.router.navigate(['/factures']);
+  }
 }

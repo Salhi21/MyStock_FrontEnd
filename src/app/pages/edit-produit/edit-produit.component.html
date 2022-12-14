@@ -16,15 +16,18 @@
         <span class="tag is-medium">
           Date
         </span>
-        <input #dateInput class="input has-background-light is-medium" type="date" value="{{prod.dateAjout}}" placeholder="Type here ...">
+        <input #dateInput class="input has-background-light is-medium" type="date" [value]="prod.dateAjout" placeholder="Type here ...">
         <span class="tag is-medium">
           Categorie
         </span>
-        <input #categorieInput class="input has-background-light is-medium" type="number" value="{{categ.idCateg}}" placeholder="Type here ...">
-        <br><br>
+        <div class="select">
+            <select #categorieInput name="categorie" id="cat">
+          <option *ngFor="let categorie of categories" value="{{categorie.idCateg}}}">{{categorie.libCateg}}</option>
+        </select>
+        </div> <br><br>
         <div class="buttons is-right">
             <div class="button is-medium" routerLink="/">Cancel</div>
-            <div class="button is-primary has-text-white is-medium" (click)="editProduit(nameInput.value,priceInput.valueAsNumber,descriptionInput.value,dateInput.value,categorieInput.valueAsNumber)">Create</div>
+            <div class="button is-primary has-text-white is-medium" (click)="editProduit(nameInput.value,priceInput.valueAsNumber,descriptionInput.value,dateInput.value,categorieInput.selectedIndex)">Edit</div>
         </div>
     </div>
 </div>
